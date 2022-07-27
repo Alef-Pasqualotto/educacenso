@@ -21,13 +21,11 @@ Route::get('/', function () {
 });
 
 Route::get('/cursos', [CursoController::class, 'index']);
-<<<<<<< HEAD
-=======
 Route::get('/cursos/{id}/show', [CursoController::class, 'show'])->where('id','[0-9]+');
 Route::get('/cursos/create', [CursoController::class, 'create']);
 Route::post('/cursos/store', [CursoController::class, 'store']);
 Route::get('/cursos/{id}/edit', [CursoController::class, 'edit']);
-Route::post('/cursos/update', [CursoController::class, 'update']);
+Route::post('/cursos/update', [CursoController::clgtass, 'update']);
 Route::get('/cursos/{id}/destroy', [CursoController::class, 'destroy']);
 
 Route::get('/periodo', [PeriodoController::class, 'index']);
@@ -53,4 +51,3 @@ Route::post('/turma/store', [TurmaController::class, 'store']);
 Route::get('/turma/{id}/edit', [TurmaController::class, 'edit']);
 Route::post('/turma/update', [TurmaController::class, 'update']);
 Route::get('/turma/{id}/destroy', [TurmaController::class, 'destroy']);
->>>>>>> a4ec5421b82d1b79f9513de8fd1b2b55cef5f758

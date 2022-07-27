@@ -53,7 +53,7 @@ class CursoController extends Controller
             ->selectRaw("
                 id_cursos,
                 nome_cursos,
-                curso_id
+                nome_reduzido
                 ")
             ->find($id);
  
