@@ -25,7 +25,7 @@ Route::get('/cursos/{id}/show', [CursoController::class, 'show'])->where('id','[
 Route::get('/cursos/create', [CursoController::class, 'create']);
 Route::post('/cursos/store', [CursoController::class, 'store']);
 Route::get('/cursos/{id}/edit', [CursoController::class, 'edit']);
-Route::post('/cursos/update', [CursoController::clgtass, 'update']);
+Route::post('/cursos/update', [CursoController::class, 'update']);
 Route::get('/cursos/{id}/destroy', [CursoController::class, 'destroy']);
 
 Route::get('/periodo', [PeriodoController::class, 'index']);
