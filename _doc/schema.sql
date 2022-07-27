@@ -1,4 +1,4 @@
-DELETE DATABASE IF EXISTS educacenso;
+DROP DATABASE IF EXISTS educacenso;
 CREATE DATABASE educacenso;
 
 use educacenso;
@@ -20,7 +20,7 @@ create table turmas(
 
 create table periodos(
     id_periodos int not null auto_increment,
-    ano date not null,
+    ano int not null,
     dt_inicio date not null,
     dt_fim date not null,
     primary key(id_periodos)
@@ -38,8 +38,15 @@ create table respostas(
     uf_id int not null,
     transporte ENUM('onibus','van','microonibus') not null,
     poder_publico_responsavel ENUM('municipio', 'estado') not null,
-    diferenca_paga int not null,
+    diferenca_paga int not null default 0,
     primary key(id_repostas)
 );
 
-INSERT INTO cursos (nome_cursos, nome_reduzido) VALUES ('Informática para a Internet', 'INFO'), ('Agropecuária', 'AGRO'), ('Viticultura e Enologia', 'VITIENO'), ('Administração', 'ADM');
+INSERT INTO cursos (nome_cursos, nome_reduzido) VALUES ('Informatica para a Internet', 'INFO'), ('Agropecuaria', 'AGRO'), ('Viticultura e Enologia', 'VITIENO'), ('Administracao', 'ADM'), ('Meio Ambiente', 'MEIO');
+
+INSERT INTO turmas (nome_turmas, curso_id) VALUES ('1º Agro A 2021', 2), ('2º Agro A 2021', 2), ('1º Info 2022', 1), ('2º Info 2022', 1), ('3º Vitieno 2020', 3);
+
+INSERT INTO periodos (ano, dt_inicio, dt_fim) VALUES (2022, '2022-01-01', '2022-01-31'), (2021, '2021-01-01', '2021-01-31'), (2022, '2022-07-15', '2022-08-31');
+
+-- INSERT INTO respostas (periodo_id, nome_aluno, turma_id, cpf, cidade, cidade_id, uf, uf_id, transporte, poder_publico_responsavel, diferenca_paga) 
+-- VALUES (1, 'Roberta Mineira', 3, '25836914725', 'Itajaí', , 'RS', , 'onibus', 'estado')
