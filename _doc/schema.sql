@@ -34,11 +34,10 @@ create table respostas(
     cidade varchar(100) not null,
     cidade_id int not null,
     uf char(2) not null,
+    uf_id int not null,
     transporte ENUM('onibus','van','microonibus') not null,
-    poder_publico_responsavel ENUM('municipio', 'estado'),
+    poder_publico_responsavel ENUM('municipio', 'estado') not null,
     diferença_paga int not null,
     primary key(id_repostas)
-)
+);
 
-// uf
-// uf_id
