@@ -1,3 +1,4 @@
+DELETE DATABASE IF EXISTS educacenso;
 CREATE DATABASE educacenso;
 
 use educacenso;
@@ -37,7 +38,8 @@ create table respostas(
     uf_id int not null,
     transporte ENUM('onibus','van','microonibus') not null,
     poder_publico_responsavel ENUM('municipio', 'estado') not null,
-    diferença_paga int not null,
+    diferenca_paga int not null,
     primary key(id_repostas)
 );
 
+INSERT INTO cursos (nome_cursos, nome_reduzido) VALUES ('Informática para a Internet', 'INFO'), ('Agropecuária', 'AGRO'), ('Viticultura e Enologia', 'VITIENO'), ('Administração', 'ADM');
