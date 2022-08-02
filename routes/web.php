@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PeriodoController;
 use App\Http\Controllers\RespostaController;
 use App\Http\Controllers\TurmaController;
@@ -52,4 +53,4 @@ Route::get('/turma/{id}/edit', [TurmaController::class, 'edit']);
 Route::post('/turma/update', [TurmaController::class, 'update']);
 Route::get('/turma/{id}/destroy', [TurmaController::class, 'destroy']);
 
-Route::get('/home', ['index']);
+Route::get('/home', [HomeController::class, 'index']);
