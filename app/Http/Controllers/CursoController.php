@@ -30,7 +30,7 @@ class CursoController extends Controller
 
     function edit($id){
 
-        $cursos = DB::table('cursos')->find($id);
+        $cursos = DB::table('cursos')->where('id_cursos', $id)->first();
  
         return view('cursos.edit', ['cursos' => $cursos]);
  
