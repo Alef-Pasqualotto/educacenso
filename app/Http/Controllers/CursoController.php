@@ -55,7 +55,8 @@ class CursoController extends Controller
                 nome_cursos,
                 nome_reduzido
                 ")
-            ->find($id);
+            ->Where('id_cursos',$id)
+            ->first();
  
         return view('cursos.show', ['cursos' => $cursos]);
     }
