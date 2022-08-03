@@ -32,7 +32,7 @@ class PeriodoController extends Controller
 
     function edit($id){
 
-        $periodos = DB::table('periodos')->find($id);
+        $periodos = DB::table('periodos')->where('id_periodos', $id)->first();
  
         return view('periodos.edit', ['periodos' => $periodos]);
  
@@ -58,7 +58,8 @@ class PeriodoController extends Controller
                 dt_inicio,
                 dt_fim
                 ")
-            ->find($id);
+                ->Where('id_periodos',$id)
+                ->first();
  
         return view('periodos.show', ['periodos' => $periodos]);
     }

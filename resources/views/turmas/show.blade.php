@@ -3,9 +3,9 @@
 @section('container')
 
 <ul>
-    <li>ID: {{$turma->id}}</li>
-    <li>Nome: {{$turma->turma}}</li>
-    <li>Sobrenome: {{$turma->curso}}</li>
+    <li>ID: {{$turmas->id_turmas}}</li>
+    <li>Nome: {{$turmas->nome_turmas}}</li>
+    <li>Sobrenome: {{$turmas->curso}}</li>
 </ul>
 <a href="/turmas">Voltar</a>
 
