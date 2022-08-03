@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS laravel;
-CREATE DATABASE laravel;
+DROP DATABASE IF EXISTS educacenso;
+CREATE DATABASE educacenso;
 
-use laravel;
+use educacenso;
 
 create table cursos(
     id_cursos int not null auto_increment,

@@ -17,7 +17,7 @@ use App\Http\Controllers\TurmaController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+   echo 'baita';
 });
 
 Route::get('/cursos', [CursoController::class, 'index']);
