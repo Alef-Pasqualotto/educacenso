@@ -52,5 +52,3 @@ Route::post('/turma/store', [TurmaController::class, 'store']);
 Route::get('/turma/{id}/edit', [TurmaController::class, 'edit']);
 Route::post('/turma/update', [TurmaController::class, 'update']);
 Route::get('/turma/{id}/destroy', [TurmaController::class, 'destroy']);
-
-Route::get('/home', [HomeController::class, 'index']);
