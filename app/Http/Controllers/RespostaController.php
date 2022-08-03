@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class PeriodoController extends Controller
+class RespostaController extends Controller
 {
     function index(){
         $respostas = DB::table('respostas')
