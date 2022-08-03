@@ -3,10 +3,10 @@
 @section('container')
 
 <ul>
-    <li>ID: {{$curso->id_cursos}}</li>
-    <li>Nome: {{$curso->nome_cursos}}</li>
-    <li>Sobrenome: {{$curso->nome_reduzido}}</li>
+    <li>ID: {{$cursos->id_cursos}}</li>
+    <li>Nome do Curso: {{$cursos->nome_cursos}}</li>
+    <li>Nome Reduzido: {{$cursos->nome_reduzido}}</li>
 </ul>
-<a href="/cursos">Voltar</a>
+<a class="btn btn-danger" href="/cursos">Voltar</a>
 
 @endsection

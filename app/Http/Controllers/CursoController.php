@@ -20,7 +20,7 @@ class CursoController extends Controller
 
     function store(Request $request){
         $data = $request->all();
- 
+        var_dump($data);
         unset($data['_token']);
  
         DB::table('cursos')->insert($data);
@@ -30,7 +30,7 @@ class CursoController extends Controller
 
     function edit($id){
 
-        $cursos = DB::table('cursos')->find($id);
+        $cursos = DB::table('cursos')->where('id_cursos', $id)->first();
  
         return view('cursos.edit', ['cursos' => $cursos]);
  
@@ -55,7 +55,8 @@ class CursoController extends Controller
                 nome_cursos,
                 nome_reduzido
                 ")
-            ->find($id);
+            ->Where('id_cursos',$id)
+            ->first();
  
         return view('cursos.show', ['cursos' => $cursos]);
     }

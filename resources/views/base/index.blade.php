@@ -2,7 +2,8 @@
 <html lang="pt-BR">
 @include('base.header', ['title' => 'Teste'])
 <body>
-    <div class="container">
+    @include('base.navbar')
+    <div class="container mt-2">
         @yield('container')
     </div>
 

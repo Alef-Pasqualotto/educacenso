@@ -15,7 +15,7 @@ create table turmas(
     nome_turmas varchar(100) not null,
     curso_id int not null,
     primary key(id_turmas),
-    CONSTRAINT FK_TurmasCursos FOREIGN KEY (curso_id) REFERENCES cursos(id_cursos)
+    CONSTRAINT FK_TurmasCursos FOREIGN KEY (curso_id) REFERENCES cursos(id_cursos) ON DELETE CASCADE
 );
 
 create table periodos(
@@ -27,7 +27,7 @@ create table periodos(
 );
 
 create table respostas(
-    id_repostas int not null auto_increment,
+    id_respostas int not null auto_increment,
     periodo_id int not null,
     nome_aluno varchar(100) not null,
     turma_id int not null,
@@ -39,7 +39,7 @@ create table respostas(
     transporte ENUM('onibus','van','microonibus') not null,
     poder_publico_responsavel ENUM('municipio', 'estado') not null,
     diferenca_paga int not null default 0,
-    primary key(id_repostas)
+    primary key(id_respostas)
 );
 
 INSERT INTO cursos (nome_cursos, nome_reduzido) VALUES ('Informatica para a Internet', 'INFO'), ('Agropecuaria', 'AGRO'), ('Viticultura e Enologia', 'VITIENO'), ('Administracao', 'ADM'), ('Meio Ambiente', 'MEIO');
