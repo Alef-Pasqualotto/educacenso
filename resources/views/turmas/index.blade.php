@@ -13,12 +13,12 @@
     <tbody>
         @foreach($turmas as $turma)
             <tr>
-                <td>{{$turma->turma}}</td>
-                <td>{{$turma->curso}}</td>
+                <td>{{$turma->nome_turmas}}</td>
+                <td>{{$turma->curso_id}}</td>
                 <td>
-                    <a class="btn btn-warning" href="/turmas/{{$turma->id}}/edit">Editar</a>
-                    <a class="btn btn-info" href="/turmas/{{$turma->id}}/show">Ver</a>
-                    <a class="btn btn-danger" href="/turmas/{{$turma->id}}/destroy">Remover</a>
+                    <a class="btn btn-warning" href="/turmas/{{$turma->id_turmas}}/edit">Editar</a>
+                    <a class="btn btn-info" href="/turmas/{{$turma->id_turmas}}/show">Ver</a>
+                    <a class="btn btn-danger" href="/turmas/{{$turma->id_turmas}}/destroy">Remover</a>
                 </td>
             </tr>
         @endforeach

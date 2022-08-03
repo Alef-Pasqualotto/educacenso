@@ -20,7 +20,7 @@ class CursoController extends Controller
 
     function store(Request $request){
         $data = $request->all();
- 
+        var_dump($data);
         unset($data['_token']);
  
         DB::table('cursos')->insert($data);
