@@ -3,7 +3,7 @@
 @include('base.header', ['title' => 'Teste'])
 <body>
     @include('base.navbar')
-    <div class="container">
+    <div class="container mt-2">
         @yield('container')
     </div>
 

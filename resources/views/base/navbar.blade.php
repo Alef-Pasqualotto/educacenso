@@ -20,7 +20,7 @@
                         <a class="nav-link" href="/periodos/">Períodos</a>
                     </li>
                     <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
-                        <a class="nav-link" href="/resposta/">Resposta</a>
+                        <a class="nav-link" href="/respostas/">Resposta</a>
                     </li>
                     <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
                         <a class="nav-link" href="/turmas/">Turma</a>
