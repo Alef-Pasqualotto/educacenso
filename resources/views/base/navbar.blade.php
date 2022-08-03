@@ -5,7 +5,7 @@
       <div class="row">
         <!-- Left elements -->
         <div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
-          <a href="#!" class="ms-md-2">
+          <a href="/inicio/" class="ms-md-2">
             <img src="https://i.redd.it/gvnr0rhke7o31.jpg" height="60" width="60" />
           </a>
 
