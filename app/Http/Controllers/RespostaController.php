@@ -13,7 +13,9 @@ class RespostaController extends Controller
         ->orderBy('id_respostas')
         ->get();
 
-        return view('respostas.index', ['respostas' => $respostas]);
+        $turmas = DB::table('turmas');
+
+        return view('respostas.index', ['respostas' => $respostas, 'turmas' => $turmas]);
     }
 
     function create(){
@@ -29,32 +31,12 @@ class RespostaController extends Controller
  
         return redirect('/respostas');
     }
-
-    function edit($id){
-
-        $respostas = DB::table('respostas')->find($id);
- 
-        return view('respostas.edit', ['respostas' => $respostas]);
- 
-    }
-    function update(Request $request){
-        $data = $request->all();
-        unset($data['_token']);
-        
-        $id = array_shift($data);
-
-        DB::table('respostas')
-            ->where('id_respostas',$id)
-            ->update(array_intersect_key($data,[ 'periodo_id'=>1, 'nome_aluno'=>1, 'turma_id'=>1, 'cpf'=>1, 'cidade'=>1, 'cidade_id'=>1, 'uf'=>1, 'uf_id'=>1, 'transporte'=>1, 'poder_publico_responsavel'=>1, 'diferenca_paga'=>1]));
- 
-        return redirect('/respostas');
-    }
  
     function show($id){
         $respostas = DB::table('respostas')
             ->selectRaw("
             id_respostas, 
-            periodo_id, 
+            periodo _id, 
             nome_aluno, 
             turma_id, 
             cpf, 
@@ -71,11 +53,11 @@ class RespostaController extends Controller
         return view('respostas.show', ['respostas' => $respostas]);
     }
  
-    function destroy($id){
+    // function destroy($id){
  
-        DB::table('respostas')
-            ->where('id_respostas', $id)
-            ->delete();
-        return redirect('/respostas');
-    }
+    //     DB::table('respostas')
+    //         ->where('id_respostas', $id)
+    //         ->delete();
+    //     return redirect('/respostas');
+    // }
 }

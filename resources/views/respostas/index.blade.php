@@ -3,10 +3,11 @@
 @section('container')
 <form action='/respostas/store' method='post'>
     <input type='hidden' name='_token' value='{{ csrf_token() }}'/>
-    <input type="hidden" value="{{ $periodos->id }}" name="id"/>
+    
     
     @include('components.field', ['type'=> 'text', 'name' => 'nome_aluno', 'label' => 'Nome do Aluno', 'value' => ""])
-    @include('components.field', ['type'=> 'number', 'name' => 'turma_id', 'label' => 'Id da Turma', 'value' => ""])
+    @include('components.selectTurma', ['turmas'=> $turmas])
+    @include('components.field', ['type'=> 'number', 'name' => 'turma_id', 'label' => 'Turma', 'value' => ""])
     @include('components.field', ['type'=> 'number', 'name' => 'cpf', 'label' => 'CPF', 'value' => ""])
     <div class="mb-2">
         <label for="uf" class="form-label">UF</label>
