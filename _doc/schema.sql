@@ -16,8 +16,7 @@ create table turmas(
     curso_id int not null,
     nome_cursos varchar(100) not null,
     primary key(id_turmas),
-    CONSTRAINT FK_TurmasCursos FOREIGN KEY (curso_id) REFERENCES cursos(id_cursos),
-    CONSTRAINT FK_TurmasCursosNome FOREIGN KEY (nome_cursos) REFERENCES cursos(nome_cursos)
+    CONSTRAINT FK_TurmasCursos FOREIGN KEY (curso_id) REFERENCES cursos(id_cursos) ON DELETE CASCADE
 );
 
 create table periodos(
