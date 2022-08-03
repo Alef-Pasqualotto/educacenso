@@ -12,14 +12,15 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($periodos as $periodo)
+        @foreach($periodos as $periodos)
             <tr>
-                <td>{{$periodo->periodo}}</td>
-                <td>{{$periodo->periodo}}</td>
+                <td>{{$periodos->ano}}</td>
+                <td>{{$periodos->dt_inicio}}</td>
+                <td>{{$periodos->dt_fim}}</td>
                 <td>
-                    <a class="btn btn-warning" href="/periodos/{{$periodo->id}}/edit">Editar</a>
-                    <a class="btn btn-info" href="/periodos/{{$periodo->id}}/show">Ver</a>
-                    <a class="btn btn-danger" href="/periodos/{{$periodo->id}}/destroy">Remover</a>
+                    <a class="btn btn-warning" href="/periodos/{{$periodos->id_periodos}}/edit">Editar</a>
+                    <a class="btn btn-info" href="/periodos/{{$periodos->id_periodos}}/show">Ver</a>
+                    <a class="btn btn-danger" href="/periodos/{{$periodos->id_periodos}}/destroy">Remover</a>
                 </td>
             </tr>
         @endforeach
