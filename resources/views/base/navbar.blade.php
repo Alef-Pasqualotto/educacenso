@@ -15,4 +15,3 @@
                 </div>
             </div>
         </nav>
-        <link href="{{ asset('/css/styles.css') }}" rel="stylesheet"> 
