@@ -8,16 +8,18 @@ use Illuminate\Support\Facades\DB;
 class TurmaController extends Controller
 {
     function index(){
-        $turmas = DB::table('turmas')
-        ->SelectRaw('id_turmas, nome_turmas, curso_id')
-        ->orderBy('nome_turmas')
-        ->get();
+        // $turmas = DB::table('turmas')
+        // ->SelectRaw('id_turmas, nome_turmas, curso_id')        
+        // ->orderBy('nome_turmas')
+        // ->get();
 
-        return view('turmas.index', ['turmas' => $turmas]);
+        $turmas = DB::select('select id_turmas, nome_turmas, cursos.nome_cursos from turmas inner join cursos on cursos.id_cursos = turmas.curso_id order by nome_turmas');        
+
+        return view('turmas.index', ['turmas' => $turmas, 'title' => 'Turmas']);
     }
 
     function create(){
-        return view('turmas.create');
+        return view('turmas.create', ['title' => 'Inserir turma']);
     }
 
     function store(Request $request){
@@ -32,9 +34,9 @@ class TurmaController extends Controller
 
     function edit($id){
 
-        $turmas = DB::table('turmas')->find($id);
+        $turmas = DB::table('turmas')->where('id_turmas', $id)->first();
  
-        return view('turmas.edit', ['turmas' => $turmas]);
+        return view('turmas.edit', ['turma' => $turmas, 'title' => 'Editar turma']);
  
     }
     function update(Request $request){
@@ -59,7 +61,7 @@ class TurmaController extends Controller
                 ")
             ->find($id);
  
-        return view('turmas.show', ['turmas' => $turmas]);
+        return view('turmas.show', ['turmas' => $turmas, 'title' => 'Turmas']);
     }
  
     function destroy($id){

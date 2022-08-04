@@ -14,7 +14,7 @@
         @foreach($turmas as $turma)
             <tr>
                 <td>{{$turma->nome_turmas}}</td>
-                <td>{{$turma->curso_id}}</td>
+                <td>{{$turma->nome_cursos}}</td>
                 <td>
                     <a class="btn btn-warning" href="/turmas/{{$turma->id_turmas}}/edit">Editar</a>
                     <a class="btn btn-info" href="/turmas/{{$turma->id_turmas}}/show">Ver</a>

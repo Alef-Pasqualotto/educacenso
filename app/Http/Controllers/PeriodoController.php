@@ -9,15 +9,15 @@ class PeriodoController extends Controller
 {
     function index(){
         $periodos = DB::table('periodos')
-        ->SelectRaw('id_periodos, ano, dt_inicio, dt_fim')
+        ->SelectRaw('id_periodos, ano, date_format(dt_inicio, \'%d/%m/%Y\') as dt_inicio,  date_format(dt_fim, \'%d/%m/%Y\') as dt_fim')
         ->orderBy('ano')
         ->get();
 
-        return view('periodos.index', ['periodos' => $periodos]);
+        return view('periodos.index', ['periodos' => $periodos, 'title' => 'Períodos']);
     }
 
     function create(){
-        return view('periodos.create');
+        return view('periodos.create', ['title' => 'Criar Período']);
     }
 
     function store(Request $request){
@@ -34,7 +34,7 @@ class PeriodoController extends Controller
 
         $periodos = DB::table('periodos')->where('id_periodos', $id)->first();
  
-        return view('periodos.edit', ['periodos' => $periodos]);
+        return view('periodos.edit', ['periodos' => $periodos, 'title' => 'Editar período']);
  
     }
     function update(Request $request){
@@ -61,7 +61,7 @@ class PeriodoController extends Controller
                 ->Where('id_periodos',$id)
                 ->first();
  
-        return view('periodos.show', ['periodos' => $periodos]);
+        return view('periodos.show', ['periodos' => $periodos, 'title' => 'Períodos']);
     }
  
     function destroy($id){

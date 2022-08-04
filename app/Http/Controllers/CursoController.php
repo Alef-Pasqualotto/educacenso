@@ -11,11 +11,11 @@ class CursoController extends Controller
         $cursos = DB::table('cursos')->SelectRaw('id_cursos, nome_cursos, nome_reduzido')
         ->orderBy('nome_cursos')
         ->get();
-        return view('cursos.index', ['cursos' => $cursos]);
+        return view('cursos.index', ['cursos' => $cursos, 'title' => 'Cursos']);
     }
 
     function create(){
-        return view('cursos.create');
+        return view('cursos.create', ['title' => 'Inserir curso']);
     }
 
     function store(Request $request){
@@ -58,7 +58,7 @@ class CursoController extends Controller
             ->Where('id_cursos',$id)
             ->first();
  
-        return view('cursos.show', ['cursos' => $cursos]);
+        return view('cursos.show', ['cursos' => $cursos, 'title' => 'Cursos']);
     }
  
     function destroy($id){

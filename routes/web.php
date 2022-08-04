@@ -53,5 +53,5 @@ Route::get('/turmas/{id}/edit', [TurmaController::class, 'edit']);
 Route::post('/turmas/update', [TurmaController::class, 'update']);
 Route::get('/turmas/{id}/destroy', [TurmaController::class, 'destroy']);
 
-Route::view('/inicio/', 'inicio.index');
+Route::view('/inicio/', 'inicio.index', ['title' => 'Bem-vindo!']);
  

@@ -15,11 +15,11 @@ class RespostaController extends Controller
 
         $turmas = DB::select('SELECT * FROM turmas');
 
-        return view('respostas.index', ['respostas' => $respostas, 'turmas' => $turmas]);
+        return view('respostas.index', ['respostas' => $respostas, 'turmas' => $turmas, 'title'=> 'Respostas']);
     }
 
     function create(){
-        return view('respostas.create');
+        return view('respostas.create', ['title' => 'Criar respostas']);
     }
 
     function store(Request $request){
@@ -50,7 +50,7 @@ class RespostaController extends Controller
             ")
             ->find($id);
  
-        return view('respostas.show', ['respostas' => $respostas]);
+        return view('respostas.show', ['respostas' => $respostas, 'title' => 'Respostas']);
     }
  
     // function destroy($id){
