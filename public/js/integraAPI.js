@@ -1,13 +1,14 @@
 
 let select = document.getElementById('uf');
+let query = $('#uf');
 
 
-$.getJSON('https://servicodados.ibge.gov.br/api/v1/localidades/estados', function(data){
+
+//   $.getJSON( "https://servicodados.ibge.gov.br/api/v1/localidades/estados", function( data ) {
+//     var options = [];
+//     $.each( data, function( id, nome ) {
+//       options.push( "<option value='" + id + "'>" + nome + "</option>" );
+//     });
+//     select.append(options);
     
-console.log(data);
-// var display = `User_ID: ${data.userId}<br>
-    //                ID: ${data.id}<br>
-    //                Title: ${data.title}<br>
-    //                Completion_Status: ${data.completed}`
-    // $(".display").html(display);
-  });
+//   });

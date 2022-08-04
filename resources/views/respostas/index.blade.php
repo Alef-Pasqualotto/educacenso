@@ -65,7 +65,7 @@
         <input type="text" value="" name="valor_diferenca" class="form-control" id="valor_diferenca">
     </div>
     <a class="btn btn-danger" href="/home">Voltar</a>    
-    <script ssrc="{{ asset('/js/integraAPI.js') }}" rel="stylesheet"></script>
+    <script src="{{ asset('/js/integraAPI.js') }}" rel="stylesheet"></script>
     @include('components.button', ['color'=> 'primary', 'label' => 'Salvar Resposta', 'type' => 'submit'])
   </form>
 @endsection
