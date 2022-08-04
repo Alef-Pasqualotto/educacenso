@@ -5,7 +5,6 @@ use App\Http\Controllers\CursoController;
 use App\Http\Controllers\PeriodoController;
 use App\Http\Controllers\RespostaController;
 use App\Http\Controllers\TurmaController;
-use App\Http\Controllers\InicioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
