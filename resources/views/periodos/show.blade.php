@@ -8,6 +8,6 @@
     <li>Sobrenome: {{$periodos->dt_inicio}}</li>
     <li>Sobrenome: {{$periodos->dt_fim}}</li>
 </ul>
-<a href="/periodos">Voltar</a>
+<a class="btn btn-danger"  href="/periodos">Voltar</a>
 
 @endsection

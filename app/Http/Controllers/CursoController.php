@@ -32,7 +32,7 @@ class CursoController extends Controller
 
         $cursos = DB::table('cursos')->where('id_cursos', $id)->first();
  
-        return view('cursos.edit', ['cursos' => $cursos]);
+        return view('cursos.edit', ['cursos' => $cursos, 'title' => 'Editar cursos']);
  
     }
     function update(Request $request){

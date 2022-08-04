@@ -59,7 +59,8 @@ class TurmaController extends Controller
                 nome_turmas,
                 curso_id
                 ")
-            ->find($id);
+            ->Where('id_turmas',$id)
+            ->first();
  
         return view('turmas.show', ['turmas' => $turmas, 'title' => 'Turmas']);
     }
