@@ -11,7 +11,9 @@
     @include('components.field', ['type'=> 'number', 'name' => 'cpf', 'label' => 'CPF', 'value' => ""])
     <div class="mb-2">
         <label for="uf" class="form-label">UF</label>
-        <input type="text" value="" name="uf" class="form-control" id="uf">
+        <select name="uf" id="uf" class="form-control">
+
+        </select>        
         <input type="hidden" value="" name="uf_id"/>
     </div>
     <div class="mb-2">
@@ -62,7 +64,8 @@
         <label for="valor_diferenca" class="form-label">Qual o valor?</label>
         <input type="text" value="" name="valor_diferenca" class="form-control" id="valor_diferenca">
     </div>
-    <a class="btn btn-danger" href="/home">Voltar</a>
+    <a class="btn btn-danger" href="/home">Voltar</a>    
+    <script ssrc="{{ asset('/js/integraAPI.js') }}" rel="stylesheet"></script>
     @include('components.button', ['color'=> 'primary', 'label' => 'Salvar Resposta', 'type' => 'submit'])
   </form>
 @endsection
