@@ -13,7 +13,7 @@ class RespostaController extends Controller
         ->orderBy('id_respostas')
         ->get();
 
-        $turmas = DB::table('turmas');
+        $turmas = DB::select('SELECT * FROM turmas');
 
         return view('respostas.index', ['respostas' => $respostas, 'turmas' => $turmas]);
     }

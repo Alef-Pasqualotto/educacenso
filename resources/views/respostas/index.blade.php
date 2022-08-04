@@ -32,13 +32,13 @@
         <label for="poder_publico">Poder Público Responsável</label>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="poder_publico" id="prefeitura">
-            <label class="form-check-label" for="poder_publico1">
+            <label class="form-check-label" for="prefeitura">
               Prefeitura
             </label>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="poder_publico" id="estado">
-            <label class="form-check-label" for="poder_publico2">
+            <label class="form-check-label" for="estado">
               Estado
             </label>
         </div>
@@ -47,13 +47,13 @@
         <label for="poder_publico">Você paga alguma diferença?</label>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="paga_diferenca" id="sim">
-            <label class="form-check-label" for="paga_diferenca1">
+            <label class="form-check-label" for="sim">
               Sim
             </label>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="paga_diferenca" id="nao">
-            <label class="form-check-label" for="paga_diferenca2">
+            <label class="form-check-label" for="nao">
               Não
             </label>
         </div>
