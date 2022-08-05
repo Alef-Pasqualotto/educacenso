@@ -25,7 +25,7 @@
         <select class="form-select">
           <option selected>Selecione o tipo de transporte</option>
           <option value="onibus">Ônibus</option>
-          <option value="micro-onibus">Micro-ônibus</option>
+          <option value="microonibus">Micro-ônibus</option>
           <option value="van">Van</option>
         </select>
     </div>

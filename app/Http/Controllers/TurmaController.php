@@ -36,8 +36,8 @@ class TurmaController extends Controller
     function edit($id){
 
         $turmas = DB::table('turmas')->where('id_turmas', $id)->first();
- 
-        return view('turmas.edit', ['turma' => $turmas, 'title' => 'Editar turma']);
+        $cursos = DB::select('SELECT * FROM cursos');
+        return view('turmas.edit', ['turma' => $turmas, 'title' => 'Editar turma', 'cursos' => $cursos]);
  
     }
     function update(Request $request){
@@ -48,7 +48,7 @@ class TurmaController extends Controller
 
         DB::table('turmas')
             ->where('id_turmas',$id)
-            ->update(array_intersect_key($data,['nome_turmas'=>1,'curso_id'=>1]));
+            ->update(array_intersect_key($data,['nome_turmas'=>1, 'curso_id'=>1]));
  
         return redirect('/turmas');
     }
