@@ -6,7 +6,7 @@ document.addEventListener('click', (e) =>{
         document.getElementById("form_valor_diferenca").style.display = "block"
     }
 
-    else { 
+    if (elementId == 'nao') {
         document.getElementById("form_valor_diferenca").style.display = "none"
     }
   }

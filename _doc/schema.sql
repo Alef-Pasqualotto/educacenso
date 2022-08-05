@@ -28,6 +28,7 @@ create table periodos(
 
 create table respostas(
     id_respostas int not null auto_increment,
+    curso_id int not null,
     periodo_id int not null,
     nome_aluno varchar(100) not null,
     turma_id int not null,
@@ -40,6 +41,7 @@ create table respostas(
     poder_publico_responsavel ENUM('municipio', 'estado') not null,
     diferenca_paga int not null default 0,
     primary key(id_respostas)
+    CONSTRAINT FK_RespostasCursos FOREIGN KEY (curso_id) REFERENCES cursos(id_cursos) ON DELETE CASCADE
 );
 
 INSERT INTO cursos (nome_cursos, nome_reduzido) VALUES ('Informatica para a Internet', 'INFO'), ('Agropecuaria', 'AGRO'), ('Viticultura e Enologia', 'VITIENO'), ('Administracao', 'ADM'), ('Meio Ambiente', 'MEIO');
