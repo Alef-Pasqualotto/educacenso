@@ -7,3 +7,4 @@
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 <script src="{{ asset('/js/scripts.js') }}"></script>
 <script src="{{ asset('/js/form.js') }}"></script>
+<link href="{{ asset('/css/styles.css') }}" rel="stylesheet"> 
