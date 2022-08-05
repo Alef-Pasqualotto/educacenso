@@ -6,8 +6,14 @@
     
     
     @include('components.field', ['type'=> 'text', 'name' => 'nome_aluno', 'label' => 'Nome do Aluno', 'value' => ""])
+    <div class="mb-2 mt-2">
+    <label for="turma" class="form-label">Turma:</label>
     @include('components.selectTurma', ['turmas'=> $turmas])
-    @include('components.field', ['type'=> 'number', 'name' => 'turma_id', 'label' => 'Turma', 'value' => ""])
+    </div>
+    <div class="mb-2 mt-2">
+    <label for="curso" class="form-label">Curso</label>
+    @include('components.selectCurso', ['name' => 'nome_cursos', 'label' => 'Curso', 'cursos'=> $cursos])
+  </div>
     @include('components.field', ['type'=> 'number', 'name' => 'cpf', 'label' => 'CPF', 'value' => ""])
     <div class="mb-2">
         <label for="uf" class="form-label">UF</label>
@@ -18,16 +24,29 @@
     </div>
     <div class="mb-2">
         <label for="cidade" class="form-label">Cidade</label>
-        <select name="cidade" class="form-control" id="cidade">        
-    </div>
+        <select name="cidade" class="form-control" id="cidade">       
+        </select> 
+    </div>                    
     <div class="mb-2">
-        <label for="transporte">Transporte</label>
-        <select class="form-select">
-          <option selected>Selecione o tipo de transporte</option>
-          <option value="onibus">Ônibus</option>
-          <option value="microonibus">Micro-ônibus</option>
-          <option value="van">Van</option>
-        </select>
+        <label for="transporte">Selecione o tipo de transporte</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="transporte" id="onibus">
+            <label class="form-check-label" for="onibus">
+              Ônibus
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="transporte" id="estado">
+            <label class="form-check-label" for="microonibus">
+              Micro-ônibus
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="transporte" id="estado">
+            <label class="form-check-label" for="van">
+              Van
+            </label>
+        </div>
     </div>
     <div class="mb-2">
         <label for="poder_publico">Poder Público Responsável</label>

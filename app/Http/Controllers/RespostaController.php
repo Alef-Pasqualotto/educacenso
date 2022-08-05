@@ -14,8 +14,9 @@ class RespostaController extends Controller
         ->get();
 
         $turmas = DB::select('SELECT * FROM turmas');
+        $cursos = DB::select('SELECT * FROM cursos');
 
-        return view('respostas.index', ['respostas' => $respostas, 'turmas' => $turmas, 'title'=> 'Respostas']);
+        return view('respostas.index', ['respostas' => $respostas, 'turmas' => $turmas, 'title'=> 'Respostas', 'cursos' => $cursos]);
     }
 
     function create(){
