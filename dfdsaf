@@ -1,0 +1,15 @@
+[33mb9f3201[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33mb9f3201[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{1}: reset: moving to HEAD
+[33mb9f3201[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{2}: pull: Merge made by the 'ort' strategy.
+[33m92de02a[m HEAD@{3}: commit: api estados
+[33m4ec3f42[m HEAD@{4}: pull: Merge made by the 'ort' strategy.
+[33m266146d[m HEAD@{5}: commit (merge): api
+[33m677e304[m HEAD@{6}: commit: api
+[33med8d5fb[m HEAD@{7}: pull: Fast-forward
+[33m1e0cde6[m HEAD@{8}: pull: Fast-forward
+[33m6939ccb[m HEAD@{9}: commit: titulos e correcoes
+[33m9498b99[m HEAD@{10}: commit: select respostas
+[33m495a188[m HEAD@{11}: pull: Merge made by the 'ort' strategy.
+[33mcefc80b[m HEAD@{12}: commit: web
+[33m4ff892d[m HEAD@{13}: pull: Fast-forward
+[33mb58c3a3[m HEAD@{14}: clone: from https://github.com/Alef-Pasqualotto/educacenso.git

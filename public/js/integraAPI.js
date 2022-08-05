@@ -1,5 +1,9 @@
 let select = document.getElementById("uf");
 
+function compare(el1, el2, index) {
+    return el1[index] == el2[index] ? 0 : (el1[index] < el2[index] ? -1 : 1);
+  }
+
 function pegaJSON(path, success, error) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
@@ -19,7 +23,10 @@ function pegaJSON(path, success, error) {
     xhr.send();
 }
 
-pegaJSON("estados.json", function (data) {    
+pegaJSON("estados.json", function (data) {
+    data.sort(function(el1,el2){
+    return compare(el1, el2, "nome")
+  });
     for (let i = 0; i < data.length; i++) {
         option = document.createElement('option');        
         option.setAttribute('value', data[i]['id']);
