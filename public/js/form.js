@@ -1,5 +1,3 @@
-require('./bootstrap');
-
 $(function () {
 
 	$('#sim, #nao').on('click', function (e) {
