@@ -18,8 +18,7 @@
     </div>
     <div class="mb-2">
         <label for="cidade" class="form-label">Cidade</label>
-        <input type="text" value="" name="cidade" class="form-control" id="cidade">
-        <input type="hidden" value="" name="cidade_id" id="cidade_id">
+        <select name="cidade" class="form-control" id="cidade">        
     </div>
     <div class="mb-2">
         <label for="transporte">Transporte</label>
