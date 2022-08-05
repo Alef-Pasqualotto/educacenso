@@ -55,10 +55,12 @@ pegaJSONestados("estados.json", function (data) {
     }
 });
 
-selectEstado.addEventListener("focusout", () => {
-    console.log('disparado')
+selectEstado.addEventListener("focusout", () => {    
     let url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/municipios'.replace('{UF}', selectEstado.value);
-    document.getElementsByClassName('cidades').remove();    
+    cidades = document.getElementsByClassName('cidades');
+    for(let i = 0; i < cidades.length; i++){
+        cidades[i].remove()
+    }    
 
     pegaJSONcidades('cidades.json', function (data) {
         data.sort(function (el1, el2) {
