@@ -35,11 +35,7 @@ function pegaJSONcidades(path, success, url, error) {
             }
         }
     };
-    xhr.open(
-        "GET",
-        url,
-        true
-    );
+    xhr.open("GET", url, true);
     xhr.send();
 }
 
@@ -55,23 +51,34 @@ pegaJSONestados("estados.json", function (data) {
     }
 });
 
-selectEstado.addEventListener("focusout", () => {    
-    let url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/municipios'.replace('{UF}', selectEstado.value);
-    cidades = document.getElementsByClassName('cidades');
-    for(let i = 0; i < cidades.length; i++){
-        cidades[i].remove()
-    }    
+selectEstado.addEventListener("focusout", async function () {
+    let url =
+        "https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/municipios".replace(
+            "{UF}",
+            selectEstado.value
+        );
+    cidades = document.getElementsByClassName("cidades");
 
-    pegaJSONcidades('cidades.json', function (data) {
-        data.sort(function (el1, el2) {
-            return compare(el1, el2, "nome");
-        });
-        for (let i = 0; i < data.length; i++) {
-            option = document.createElement("option");
-            option.setAttribute("value", data[i]["id"]);
-            option.setAttribute("class", 'cidades');
-            option.innerHTML = data[i]["nome"];
-            selectCidade.appendChild(option);
+    if (cidades != null) {
+        for (let i = cidades.length - 1; i >= 0; i--) {
+            await cidades[i].remove();
         }
-    }, url);
+    }
+
+    await pegaJSONcidades(
+        "cidades.json",
+        function (data) {
+            data.sort(function (el1, el2) {
+                return compare(el1, el2, "nome");
+            });
+            for (let i = 0; i < data.length; i++) {
+                option = document.createElement("option");
+                option.setAttribute("value", data[i]["id"]);
+                option.setAttribute("class", "cidades");
+                option.innerHTML = data[i]["nome"];
+                selectCidade.appendChild(option);
+            }
+        },
+        url
+    );
 });
