@@ -19,7 +19,8 @@ class TurmaController extends Controller
     }
 
     function create(){
-        return view('turmas.create', ['title' => 'Inserir turma']);
+        $cursos = DB::select('SELECT * FROM cursos');
+        return view('turmas.create', ['title' => 'Inserir turma', 'cursos' => $cursos]);
     }
 
     function store(Request $request){
@@ -62,6 +63,8 @@ class TurmaController extends Controller
             ->Where('id_turmas',$id)
             ->first();
  
+            $cursos = DB::select('SELECT * FROM cursos');
+
         return view('turmas.show', ['turmas' => $turmas, 'title' => 'Turmas']);
     }
  
