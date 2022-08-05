@@ -1,4 +1,4 @@
-document.getElementById('#sim, #nao').addEventListener('click', (e) =>{
+document.addEventListener('click', (e) =>{
 
     let elementId = e.target.id;
 

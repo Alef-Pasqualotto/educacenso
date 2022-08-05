@@ -63,8 +63,8 @@
             </label>
         </div>
     </div>
-    <div class="mb-2">
-        <label for="poder_publico">Você paga alguma diferença?</label>
+    <div class="mb-2" id="paga_diferenca">
+        <label for="paga_diferenca">Você paga alguma diferença?</label>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="paga_diferenca" id="sim">
             <label class="form-check-label" for="sim">
