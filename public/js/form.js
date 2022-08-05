@@ -1,9 +1,13 @@
-$(function () {
+document.getElementById('#sim, #nao').addEventListener('click', (e) =>{
 
-	$('#sim, #nao').on('click', function (e) {
-		e.preventDefault();
-		$(this).attr('id') == 'sim' ? $('#form_valor_diferenca').css('display', 'block') : $('#form_valor_diferenca').css('display', 'none');
-		
-	});
+    let elementId = e.target.id;
 
-});
+    if (elementId == 'sim') {
+        document.getElementById("form_valor_diferenca").style.display = "block"
+    }
+
+    else { 
+        document.getElementById("form_valor_diferenca").style.display = "none"
+    }
+  }
+); 
