@@ -49,15 +49,15 @@
         </div>
     </div>
     <div class="mb-2">
-        <label for="poder_publico">Poder Público Responsável</label>
+        <label for="poder_publico_responsavel">Poder Público Responsável</label>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="poder_publico" id="prefeitura">
+            <input class="form-check-input" type="radio" name="poder_publico_responsavel" id="prefeitura">
             <label class="form-check-label" for="prefeitura">
               Prefeitura
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="poder_publico" id="estado">
+            <input class="form-check-input" type="radio" name="poder_publico_responsavel" id="estado">
             <label class="form-check-label" for="estado">
               Estado
             </label>
@@ -66,21 +66,21 @@
     <div class="mb-2" id="paga_diferenca">
         <label for="paga_diferenca">Você paga alguma diferença?</label>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="paga_diferenca" id="sim">
+            <input class="form-check-input" type="radio" id="sim">
             <label class="form-check-label" for="sim">
               Sim
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="paga_diferenca" id="nao">
+            <input class="form-check-input" type="radio" id="nao">
             <label class="form-check-label" for="nao">
               Não
             </label>
         </div>
     </div>
     <div class="mb-2" style="display:none" id="form_valor_diferenca">
-        <label for="valor_diferenca" class="form-label">Qual o valor?</label>
-        <input type="text" value="" name="valor_diferenca" class="form-control" id="valor_diferenca">
+        <label for="diferenca_paga" class="form-label">Qual o valor?</label>
+        <input type="text" value="" name="diferenca_paga" class="form-control" id="diferenca_paga">
     </div>
     <a class="btn btn-danger" href="/home">Voltar</a>    
     <script src="{{ asset('/js/integraAPI.js') }}" rel="stylesheet"></script>

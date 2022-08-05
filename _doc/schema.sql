@@ -40,7 +40,7 @@ create table respostas(
     transporte ENUM('onibus','van','microonibus') not null,
     poder_publico_responsavel ENUM('municipio', 'estado') not null,
     diferenca_paga int not null default 0,
-    primary key(id_respostas)
+    primary key(id_respostas),
     CONSTRAINT FK_RespostasCursos FOREIGN KEY (curso_id) REFERENCES cursos(id_cursos) ON DELETE CASCADE
 );
 
