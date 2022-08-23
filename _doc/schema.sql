@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS laravel;
+DROP DATABASE IF EXISTS educacenso;
 CREATE DATABASE educacenso;
 
 use educacenso;
