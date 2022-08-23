@@ -28,14 +28,12 @@
         </select> 
     </div>                    
     <div class="mb-2">
-        <label for="transporte">Selecione o tipo de transporte</label>
-        <div class="form-check">
-          <select name="" id="">
+        <label for="transporte" class="form-label">Selecione o tipo de transporte</label>
+          <select name="transporte" id="transporte" class="form-control">
             <option value="onibus">Ônibus</option>
             <option value="van">Van</option>
             <option value="microonibus">Micro-ônibus</option>
           </select>
-        </div>
     </div>
     <div class="mb-2">
         <label for="poder_publico_responsavel">Poder Público Responsável</label>
