@@ -30,22 +30,11 @@
     <div class="mb-2">
         <label for="transporte">Selecione o tipo de transporte</label>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="transporte" id="onibus">
-            <label class="form-check-label" for="onibus">
-              Ônibus
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="transporte" id="estado">
-            <label class="form-check-label" for="microonibus">
-              Micro-ônibus
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="transporte" id="estado">
-            <label class="form-check-label" for="van">
-              Van
-            </label>
+          <select name="" id="">
+            <option value="onibus">Ônibus</option>
+            <option value="van">Van</option>
+            <option value="microonibus">Micro-ônibus</option>
+          </select>
         </div>
     </div>
     <div class="mb-2">
