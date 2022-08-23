@@ -15,8 +15,7 @@ class RespostaController extends Controller
 
         $turmas = DB::select('SELECT * FROM turmas');
         $cursos = DB::select('SELECT * FROM cursos');
-        $confirma_periodo = DB::select('SELECT dt_inicio, dt_fim FROM periodos
-        WHERE NOW() between dt_inicio and dt_fim');
+        $confirma_periodo = DB::select('SELECT dt_inicio, dt_fim FROM periodos WHERE NOW() between dt_inicio and dt_fim');
 
         return view('respostas.index', ['respostas' => $respostas, 'turmas' => $turmas, 'title'=> 'Respostas', 'confirma_periodo' => $confirma_periodo, 'cursos' => $cursos]);
     }
@@ -30,8 +29,11 @@ class RespostaController extends Controller
  
         unset($data['_token']);
  
-        DB::table('respostas')->insert($data);
- 
+        $confirma_periodo = DB::select('SELECT id_periodos, dt_inicio, dt_fim FROM periodos WHERE NOW() between dt_inicio and dt_fim');
+        if($confirma_periodo != null){
+            $data['periodo_id'] = strval($confirma_periodo[0]->id_periodos);
+            DB::table('respostas')->insert($data);
+        }
         return redirect('/respostas');
     }
  

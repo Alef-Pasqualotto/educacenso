@@ -1,5 +1,6 @@
 let selectEstado = document.getElementById("uf");
 let selectCidade = document.getElementById("cidade");
+let cidade_id = document.getElementById("cidade_id");
 
 function compare(el1, el2, index) {
     return el1[index] == el2[index] ? 0 : el1[index] < el2[index] ? -1 : 1;
@@ -82,3 +83,5 @@ selectEstado.addEventListener("focusout", async function () {
         url
     );
 });
+
+cidade_id.addEventListener("focusout", async function () {});

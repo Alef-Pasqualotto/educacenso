@@ -24,10 +24,11 @@
         <input type="hidden" value="" name="uf_id"/>
     </div>
     <div class="mb-2">
+        <input type="hidden" name="cidade_id" id="cidade_id">
         <label for="cidade" class="form-label">Cidade</label>
         <select name="cidade" class="form-select" id="cidade">       
         </select> 
-    </div>                    
+    </div>              
     <div class="mb-2">
         <label for="transporte" class="form-label">Selecione o tipo de transporte</label>
           <select name="transporte" id="transporte" class="form-select">
@@ -54,7 +55,7 @@
     <div class="mb-2" id="paga_diferenca">
         <label for="paga_diferenca">Você paga alguma diferença?</label>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="paga_diferenca" id="sim">
+            <input class="form-check-input" type="radio" id="sim">
             <label class="form-check-label" for="sim">
               Sim
             </label>
@@ -68,7 +69,7 @@
     </div>
     <div class="mb-2" style="display:none" id="form_valor_diferenca">
         <label for="diferenca_paga" class="form-label">Qual o valor?</label>
-        <input type="text" value="" name="diferenca_paga" class="form-control" id="diferenca_paga">
+        <input type="number" value="" name="diferenca_paga" class="form-control" id="diferenca_paga">
     </div>
     <a class="btn btn-danger" href="/home">Voltar</a>    
     <script src="{{ asset('/js/integraAPI.js') }}" rel="stylesheet"></script>
