@@ -7,14 +7,17 @@
     
     
     @include('components.field', ['type'=> 'text', 'name' => 'nome_aluno', 'label' => 'Nome do Aluno', 'value' => ""])
-    <div class="mb-2 mt-2">
-    <label for="turma" class="form-label">Turma:</label>
-    @include('components.selectTurma', ['turmas'=> $turmas])
-    </div>
+    
     <div class="mb-2 mt-2">
     <label for="curso" class="form-label">Curso</label>
     @include('components.selectCurso', ['name' => 'nome_cursos', 'label' => 'Curso', 'cursos'=> $cursos])
   </div>
+    
+    <div class="mb-2 mt-2">
+    <label for="turma" class="form-label">Turma:</label>
+    @include('components.selectTurma', ['turmas'=> $turmas])
+    </div>
+    
     @include('components.field', ['type'=> 'number', 'name' => 'cpf', 'label' => 'CPF', 'value' => ""])
     <div class="mb-2">
         <label for="uf" class="form-label">UF</label>
