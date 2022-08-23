@@ -15,8 +15,10 @@ class RespostaController extends Controller
 
         $turmas = DB::select('SELECT * FROM turmas');
         $cursos = DB::select('SELECT * FROM cursos');
+        $confirma_periodo = DB::select('SELECT dt_inicio, dt_fim FROM periodos
+        WHERE NOW() between dt_inicio and dt_fim');
 
-        return view('respostas.index', ['respostas' => $respostas, 'turmas' => $turmas, 'title'=> 'Respostas', 'cursos' => $cursos]);
+        return view('respostas.index', ['respostas' => $respostas, 'turmas' => $turmas, 'title'=> 'Respostas', 'confirma_periodo' => $confirma_periodo, 'cursos' => $cursos]);
     }
 
     function create(){
