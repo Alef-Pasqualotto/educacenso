@@ -80,5 +80,5 @@
 @endsection
 
 @elseif($confirma_periodo != null)
-
+  <h1>Não pode ser cadastrada nenhuma resposta fora do período</h1>
 @endif
