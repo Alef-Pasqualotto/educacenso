@@ -18,25 +18,23 @@
     @include('components.field', ['type'=> 'number', 'name' => 'cpf', 'label' => 'CPF', 'value' => ""])
     <div class="mb-2">
         <label for="uf" class="form-label">UF</label>
-        <select name="uf" id="uf" class="form-control">
+        <select name="uf" id="uf" class="form-select">
 
         </select>        
         <input type="hidden" value="" name="uf_id"/>
     </div>
     <div class="mb-2">
         <label for="cidade" class="form-label">Cidade</label>
-        <select name="cidade" class="form-control" id="cidade">       
+        <select name="cidade" class="form-select" id="cidade">       
         </select> 
     </div>                    
     <div class="mb-2">
-        <label for="transporte">Selecione o tipo de transporte</label>
-        <div class="form-check">
-          <select name="" id="">
+        <label for="transporte" class="form-label">Selecione o tipo de transporte</label>
+          <select name="transporte" id="transporte" class="form-select">
             <option value="onibus">Ônibus</option>
             <option value="van">Van</option>
             <option value="microonibus">Micro-ônibus</option>
           </select>
-        </div>
     </div>
     <div class="mb-2">
         <label for="poder_publico_responsavel">Poder Público Responsável</label>
