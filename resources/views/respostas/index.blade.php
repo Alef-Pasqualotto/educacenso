@@ -1,5 +1,6 @@
 @extends('base.index')
 
+@if ($confirma_periodo != null)
 @section('container')
 <form action='/respostas/store' method='post'>
     <input type='hidden' name='_token' value='{{ csrf_token() }}'/>
@@ -76,3 +77,7 @@
     @include('components.button', ['color'=> 'primary', 'label' => 'Salvar Resposta', 'type' => 'submit'])
   </form>
 @endsection
+
+@elseif($confirma_periodo != null)
+
+@endif
