@@ -1,7 +1,8 @@
 @extends('base.index')
 
-@if ($confirma_periodo != null)
+
 @section('container')
+@if ($confirma_periodo != null)
 <form action='/respostas/store' method='post'>
     <input type='hidden' name='_token' value='{{ csrf_token() }}'/>
     
@@ -82,8 +83,9 @@
     <script src="{{ asset('/js/integraAPI.js') }}" rel="stylesheet"></script>
     @include('components.button', ['color'=> 'primary', 'label' => 'Salvar Resposta', 'type' => 'submit'])
   </form>
-@endsection
+
 
 @elseif($confirma_periodo == null)
   <h1>Não pode ser cadastrada nenhuma resposta fora do período</h1>
 @endif
+@endsection
