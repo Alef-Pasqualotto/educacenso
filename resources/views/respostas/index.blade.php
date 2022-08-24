@@ -78,7 +78,7 @@
         <label for="diferenca_paga" class="form-label">Qual o valor?</label>
         <input type="number" value="" name="diferenca_paga" class="form-control" id="diferenca_paga">
     </div>
-    <a class="btn btn-danger" href="/home">Voltar</a>    
+    <a class="btn btn-danger" href="/inicio">Voltar</a>    
     <script src="{{ asset('/js/integraAPI.js') }}" rel="stylesheet"></script>
     @include('components.button', ['color'=> 'primary', 'label' => 'Salvar Resposta', 'type' => 'submit'])
   </form>
