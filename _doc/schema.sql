@@ -32,7 +32,7 @@ create table respostas(
     periodo_id int not null,
     nome_aluno varchar(100) not null,
     turma_id int not null,
-    cpf varchar(11) not null,
+    cpf varchar(15) not null,
     cidade varchar(100) not null,
     cidade_id int not null,
     uf char(2) not null,
