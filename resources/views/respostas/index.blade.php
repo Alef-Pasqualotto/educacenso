@@ -19,8 +19,8 @@
     </div>
     
     <div class="mb-2 mt-2">
-    <label for="cpf" class="form-label">CPF</label>
-    <input type="text" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato nnn.nnn.nnn-nn">
+    <label for="cpf" class="form-label">CPF:</label>
+    <input type="text" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato nnn.nnn.nnn-nn" class="form-control" required>
     </div>
     
     <div class="mb-2">        
