@@ -19,12 +19,12 @@
     </div>
     
     @include('components.field', ['type'=> 'number', 'name' => 'cpf', 'label' => 'CPF', 'value' => ""])
-    <div class="mb-2">
+    <div class="mb-2">        
         <label for="uf" class="form-label">UF</label>
         <select name="uf" id="uf" class="form-select">
 
         </select>        
-        <input type="hidden" value="" name="uf_id"/>
+        <input type="hidden" value="" name="uf_id" id="uf_id"/>
     </div>
     <div class="mb-2">
         <input type="hidden" name="cidade_id" id="cidade_id">
@@ -43,13 +43,13 @@
     <div class="mb-2">
         <label for="poder_publico_responsavel">Poder Público Responsável</label>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="poder_publico_responsavel" id="prefeitura">
+            <input class="form-check-input" type="radio"  value="municipio" name="poder_publico_responsavel" id="prefeitura">
             <label class="form-check-label" for="prefeitura">
               Prefeitura
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="poder_publico_responsavel" id="estado">
+            <input class="form-check-input" type="radio" value="estado" name="poder_publico_responsavel" id="estado">
             <label class="form-check-label" for="estado">
               Estado
             </label>
@@ -58,7 +58,7 @@
     <div class="mb-2" id="paga_diferenca">
         <label for="paga_diferenca">Você paga alguma diferença?</label>
         <div class="form-check">
-            <input class="form-check-input" type="radio" id="sim">
+            <input class="form-check-input" type="radio" name="paga_diferenca" id="sim">
             <label class="form-check-label" for="sim">
               Sim
             </label>
@@ -80,6 +80,6 @@
   </form>
 @endsection
 
-@elseif($confirma_periodo != null)
+@elseif($confirma_periodo == null)
   <h1>Não pode ser cadastrada nenhuma resposta fora do período</h1>
 @endif

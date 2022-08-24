@@ -28,6 +28,10 @@ class RespostaController extends Controller
         $data = $request->all();
  
         unset($data['_token']);
+        unset($data['paga_diferenca']);
+        if($data['diferenca_paga'] == null){
+            $data['diferenca_paga'] = 0;
+        }
  
         $confirma_periodo = DB::select('SELECT id_periodos, dt_inicio, dt_fim FROM periodos WHERE NOW() between dt_inicio and dt_fim');
         if($confirma_periodo != null){
